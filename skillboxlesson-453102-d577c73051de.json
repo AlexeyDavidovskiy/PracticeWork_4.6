@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "skillboxlesson-453102",
+  "private_key_id": "d577c73051dea04ee0544baa55597329b942549a",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCvm7sF9+KqjEGA\nk/tmC06pQhoJm5R/D5Pt4o2nsmrYelNAGM7dVLhGxOpnQJ8d9BmtnWE/dDt0WBfX\nC8avOFs/+aFj9Vu8rk6trLAf47Uvyu8OeuqIi+eVHcuza104VOct4DAkoL7iW1oP\nBvGfUjwK05Xy8x7SfJQI+W9q+Eg23fWQPPwxzN7MH8SQR/Tw18oynH9P2EAU7UJ1\no6CZMnTOSNhvyNss7rQEhu1CDB/AK2Wc/8JEMt1KzdVruZ1Lmc6p94vzj88uyspe\nEyE3OuTg/P/286s1pxaIJIACWhoF7RKCESYPTO4JfFagtev/jQ1+Pu/73dhfpyQj\nM++DO4Y5AgMBAAECggEAMIooOO8a3S9lj6fXzo4DkS9vSQaTFkf1CMUdiKP9epbd\nWhNBYtZfFViqvh2TndDyJBYjYkm7gV40QMHFintWZamXnaydTdsUblcUW8wyMeKz\nD1qUZ2fcfFA/FPnxS3fUas7UH9u6x5CepRazROmTJR71DLF87It40742uOel9lwQ\ngctGJYVGy+pOYRO3NJ22cqDUx2Ytcl/KdUBX3rn56hnBXxZyWWOc/l5RkpNwgguq\nh7DEgL3puTVRCMCzO+i1cLQntzRjKKob/xuhOQnn6xXUPd4frq8WAGxDVphwAdqz\nxgB04edFh+6gXgcKdbaiagi1sR7aADkZzeB0PuRI3QKBgQDeet1Rs0OEFVG9CCqv\n5P9qCsWimJirGWAK5YNFBEE7CysElq/i9hsZeRhR6U/lSVXZbQY/EhRembrMsqO2\nANCUr2qJW1iWPln/2SV6yWTM4ywb4TfwguQSe4lEWcK4adk9U7c3O993LUxhDqIA\nW3DepHf6ux4CY7A03to1kHO/1wKBgQDKEQKQzin80ZyT3trU3L6gVoqZuikAVct4\neGpzI4WEYLE3iXPYi/x0JgC0HxOpViUA2wmbJGe/jjl0k7I7K7JT60tGzeplZcY1\nlGh3UV9tsAmRzIZUwNOKXbhOSVTE2qhklP0AwRUI3k4OWUo4/RVbAOghKcqaSjYw\nVKtSikRobwKBgQDd13u6jNsE6NFBgdQ24kxBLA6YLDsHWV0oYGU9u5ljy6YQhEVM\nNgUdqF80xkWxpyegj5ML7vY6wmW+2V5fDH7v096SqnAyGGhbsuYpgoott1RzVGcY\nPxw2xdJBQpPkmT9SZJirzdrtFlEz8ohdfNCWYT9114F79nVsss65XJnerwKBgCxd\nYbfTXAqjJwKcWmWD9eKUPagU5G2raJoRriWLdgQjiqVL64Bu88W4lkz1ycZTIJq4\nfLpwWssG+fxrdSViqaudLJDmIwGSP9uBsxIHbrFRhjhZtGClWYy2mQGvPgpei7xR\nrd7dhbXFwVOLLS2n+2lYoJ6vY0lO4+jmnhroOq7HAoGAZrAp2vJeOn4eEhQV2mmt\nsAFZ3/HwTsy/RGWg/vEeCnv8SPwGgTg7hsYBq7FaJHNM24NVvyWwy42utASHX/7S\n4WN3ZWLJeFlk+elyr5mxNs09VMG/WfmvCxcAZZTE8gCZytEn0imygokmhA4RNpBy\nS8JMVu3Hv4CkV4a8ONapZ4c=\n-----END PRIVATE KEY-----\n",
+  "client_email": "my-game-skillbox@skillboxlesson-453102.iam.gserviceaccount.com",
+  "client_id": "104041905410506694271",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/my-game-skillbox%40skillboxlesson-453102.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}

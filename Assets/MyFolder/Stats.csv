@@ -1,0 +1,5 @@
+ID,CellCapacity,Title,Description,IconName
+apple,99,Apple,Some description Apple,ui_icon_inventory_item_apple
+banana,99,Banana,Some description Banana,ui_icon_inventory_item_banana
+sword,1,Long Sword,Some description Sword,ui_icon_inventory_item_sword
+axe,1,Leviafan Axe,Some description Axe,ui_icon_inventory_item_axe
