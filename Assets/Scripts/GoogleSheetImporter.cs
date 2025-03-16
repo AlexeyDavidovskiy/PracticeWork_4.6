@@ -1,27 +1,79 @@
-using Cathei.BakingSheet;
-using System.IO;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class GoogleSheetImporter : MonoBehaviour
 {
-    private SheetContainer sheetContainer;
-    private async void Start()
+    [SerializeField] private TextAsset stats;
+
+    private void Start()
     {
-        sheetContainer = GetComponent<SheetContainer>();
-        string googleSheetId = "1o5mmUREZxFsQ_sTkvZJU9e_DLFm2iic8OjKucXtPRMA";
-        string googleCredential = File.ReadAllText("D:\\Job\\Unity\\DOTS and ECS\\PracticeWork_4.6\\PracticeWork_4.6\\skillboxlesson-453102-d577c73051de.json");
+        if (stats == null)
+        {
+            Debug.LogError("Таблица не найдена!");
+            return;
+        }
 
-        var googleConverter = new GoogleSheetConverter(googleSheetId, googleCredential);
+        ParseGoogleSheet(stats.text);
+    }
 
+    private void ParseGoogleSheet(string sheetData)
+    {
+        string[] lines = sheetData.Split('\n');
+        List<Item> items = new List<Item>();
 
-        await sheetContainer.Bake(googleConverter);
+        if (lines.Length <= 1)
+        {
+            Debug.LogError("Файл пустой или не содержит данных!");
+            return;
+        }
 
-        var jsonConverter = new JsonSheetConverter("D:\\Job\\Unity\\DOTS and ECS\\PracticeWork_4.6\\PracticeWork_4.6");
+        for (int i = 1; i < lines.Length; i++)
+        {
+            string line = lines[i].Trim();
+            if (string.IsNullOrEmpty(line)) continue;
 
-        await sheetContainer.Bake(jsonConverter);
-        var row = sheetContainer.Consumables["apple"];
+            string[] values = line.Contains(";") ? line.Split(';') : line.Split(',');
 
-        logger.LogInformation(row.Title);
+            if (values.Length < 5)
+            {
+                Debug.LogWarning($"Ошибка в строке {i}: недостаточно данных! ({values.Length} значений)");
+                continue;
+            }
+
+            string id = values[0].Trim();
+            int cellCapacity;
+            if (!int.TryParse(values[1].Trim(), out cellCapacity))
+            {
+                Debug.LogWarning($"Ошибка в строке {i}: неверное значение CellCapacity ('{values[1]}'). Заменено на 1.");
+                cellCapacity = 1;
+            }
+            string title = values[2].Trim();
+            string description = values[3].Trim();
+            string iconName = values[4].Trim();
+
+            Item newItem = new Item
+            {
+                ID = id,
+                CellCapacity = cellCapacity,
+                Title = title,
+                Description = description,
+                IconName = iconName
+            };
+
+            items.Add(newItem);
+            Debug.Log($"Добавлен предмет: {newItem.ID} ({newItem.Title})");
+        }
+
+        Debug.Log($"Загружено {items.Count} предметов!");
+    }
+
+    [System.Serializable]
+    public class Item
+    {
+        public string ID;
+        public int CellCapacity;
+        public string Title;
+        public string Description;
+        public string IconName;
     }
 }
-
